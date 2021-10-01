@@ -5,17 +5,17 @@
 {% endblock %}
 {% block content %}
 <form method="post">
-    <label for="basic-url" class="form-label">Make your link shorter</label>
+    <label for="basic-url" class="form-label">Find your url by uid</label>
     <div class="input-group mb-3">
-      <input name="long-url" type="url" placeholder="Enter link" class="form-control" value="{{ request.form['long-url'] }}" id="basic-url" aria-describedby="basic-addon3" required>
+      <input name="uid" type="text" placeholder="Enter link uid" class="form-control" value="{{ request.form['uid'] }}" id="basic-url" aria-describedby="basic-addon3" required>
     </div>
     <div class="col-12">
-        <button class="btn btn-primary" type="submit">Get short link</button>
+        <button class="btn btn-primary" type="submit">Get link</button>
     </div>
-    {% if short_url %}
+    {% if link %}
         <div class="output__link">
-            <p>Your shortcut link</p>
-            <a href="{{ short_url }}">{{ short_url }}</a>
+            <p>Your link</p>
+            <a href="{{ link }}">{{ link }}</a>
         </div>
     {% endif %}
 </form>
