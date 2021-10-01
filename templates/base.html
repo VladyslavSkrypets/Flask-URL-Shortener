@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="\static\styles\style.css">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a class="logo__link" href="{{ url_for('index') }}">URL-Shortener</a>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li class="nav-item"><a href="{{ url_for('index') }}">Get url</a></li>
+                <li class="nav-item"><a href="{{ url_for('statistic') }}">All urls</a></li>
+            </ul>
+        </nav>
+    </header>
+     <div class="container">
+            {% for message in get_flashed_messages() %}
+                <div class="alert alert-danger">{{ message }}</div>
+            {% endfor %}
+            {% block content %} {% endblock %}
+        </div>
+</body>
+</html>

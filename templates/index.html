@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block extra_head %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+<form method="post">
+    <label for="basic-url" class="form-label">Your vanity URL</label>
+    <div class="input-group mb-3">
+      <input name="long-url" type="text" placeholder="Enter link" class="form-control" value="{{ request.form['long-url'] }}" id="basic-url" aria-describedby="basic-addon3" pattern=".{0}|.{6,}" required title="https://example.com">
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Get short link</button>
+    </div>
+    {% if short_url %}
+        <div class="output__link">
+            <p>Your shortcut link</p>
+            <a href="{{ short_url }}">{{ short_url }}</a>
+        </div>
+    {% endif %}
+</form>
+{% endblock %}
