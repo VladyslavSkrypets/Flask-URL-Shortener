@@ -26,7 +26,7 @@ def index():
 @app.route("/short/<url_uid>")
 def url_redirect(url_uid):
     url = Urls.query.filter_by(uid=url_uid).first()
-    if not url:
+    if url is None:
         flash("Incorrect url id!", category="danger")
         return redirect(url_for('index'))
     return redirect(url.url, code=301)
@@ -35,7 +35,7 @@ def url_redirect(url_uid):
 @app.route("/all_info")
 def all_info():
     data = Urls.query.all()
-    if data:
+    if data is not None:
         info = [{"id": record.id,
                  "url": record.url,
                  "uid": record.uid,
