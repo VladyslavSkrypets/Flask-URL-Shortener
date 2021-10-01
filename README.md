@@ -21,6 +21,7 @@
 ## Get started
 1. You should create your db with PosgreSQL;
 2. Fill ```.env``` file with info about db port, name, password, user;
+
 Example:
 ```
 DB=mydb
