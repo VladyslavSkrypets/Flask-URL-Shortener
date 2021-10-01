@@ -14,14 +14,14 @@
         </div>
         <nav>
             <ul class="nav__links">
-                <li class="nav-item"><a href="{{ url_for('index') }}">Get url</a></li>
-                <li class="nav-item"><a href="{{ url_for('statistic') }}">All urls</a></li>
+                <li class="nav-item"><a href="{{ url_for('get_url_by_id') }}">Get url by id</a></li>
+                <li class="nav-item"><a href="{{ url_for('all_info') }}">All urls</a></li>
             </ul>
         </nav>
     </header>
-     <div class="container">
-            {% for message in get_flashed_messages() %}
-                <div class="alert alert-danger">{{ message }}</div>
+     <div class="container {{ table_style }}">
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
             {% endfor %}
             {% block content %} {% endblock %}
         </div>

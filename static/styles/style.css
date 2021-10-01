@@ -47,6 +47,10 @@ header {
     width: 700px !important;
 }
 
+.container.table {
+    width: 100% !important;
+}
+
 .mb-3, .col-12 {
     margin-top: 15px !important;
 }
