@@ -1,9 +1,11 @@
 from flask import Flask
 from dotenv import dotenv_values
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
 
 
 app = Flask(__name__)
+ma = Marshmallow(app)
 config = dotenv_values(".env")
 app.config["SECRET_KEY"] = "131f86ea3d65faf9ef9a10e9484aa36e007599c7"
 app.config['SQLALCHEMY_DATABASE_URI'] = f"postgresql://{config['USER']}:{config['PASS']}@localhost:{config['PORT']}/{config['DB']}"
