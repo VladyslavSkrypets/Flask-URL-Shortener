@@ -7,7 +7,7 @@ API provides functionality for creating short links from extraction. All request
 
 **You send:**
 1. Your link in the `link` field. ( Required! )
-2. Link lifetime in days in the `expire_days`. Field can takes string or integer format. ( Optional - default 90 days ).
+2. Link lifetime in days in the `expire_days`. Field can takes only integer format. ( Optional - default 90 days ).
 
 **Request:**
 ```json
