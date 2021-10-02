@@ -58,4 +58,4 @@ Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ## API
 
-Read about interaction with api [here]()
+Read about interaction with api [here](https://github.com/VladyslavSkrypets/Flask-URL-Shortener/tree/develop/api)
