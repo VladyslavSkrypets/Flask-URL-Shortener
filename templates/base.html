@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="\static\styles\style.css">
     {% block extra_head %}{% endblock %}
 </head>
-<body>
+<body class="{{ body }}">
     <header>
         <div class="logo">
             <a class="logo__link" href="{{ url_for('index') }}">URL-Shortener</a>
@@ -26,4 +26,5 @@
             {% block content %} {% endblock %}
         </div>
 </body>
+{% block extra_scripts %}{% endblock %}
 </html>
