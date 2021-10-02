@@ -13,6 +13,7 @@ Short url: https://bit.ly/30Pjyul
 
 ## Functional explanation
 1. ```Path /```
+
 Select the link you want to shorten and choose its lifetime (for how many days the link will be active. Default 90 days).
 At the end of the confirmation, a short link will be generated that will redirect you to the required address.
 
@@ -22,11 +23,13 @@ At the end of the confirmation, a short link will be generated that will redirec
 
 
 2. ```Path /get_url```
+
 Each short link has its own uid (8 characters after /). Knowing the uid, you can find the original length link.
 
 ![second](https://user-images.githubusercontent.com/77641899/135724046-0256c0e9-e8f6-420c-b384-4107303edc40.png)
 
 3. ```Path /all_info```
+
 On this page you can see all the information about the saved links.
 
 ![third](https://user-images.githubusercontent.com/77641899/135724128-88739d5c-ea74-4b8c-803e-2955c51a9700.png)
