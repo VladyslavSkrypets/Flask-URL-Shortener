@@ -15,7 +15,7 @@ POST /api/v1/add HTTP/1.1
 Content-Type: application/json
 {
     "link": "https://ua.jooble.org/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-junior-python/%D0%9A%D0%B8%D0%B5%D0%B2",
-    "expire_days": "180" 
+    "expire_days": 180
 }
 ```
 
