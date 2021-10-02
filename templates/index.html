@@ -7,8 +7,13 @@
 <form method="post">
     <label for="basic-url" class="form-label">Make your link shorter</label>
     <div class="input-group mb-3">
-      <input name="long-url" type="url" placeholder="Enter link" class="form-control" value="{{ request.form['long-url'] }}" id="basic-url" aria-describedby="basic-addon3" required>
-    </div>
+          <input name="long-url" type="url" placeholder="Enter link" class="form-control" value="{{ request.form['long-url'] }}" id="basic-url" aria-describedby="basic-addon3" required>
+        </div>
+        <label for="customRange1" class="form-label">Select expiration date</label>
+        <input name="days_left" class="form-range" type="range" id="customRange1" min="1" max="365" value="90">
+        <div>
+            <p>Expire after <span id="outputDays">90</span> Days</p>
+        </div>
     <div class="col-12">
         <button class="btn btn-primary" type="submit">Get short link</button>
     </div>
@@ -19,4 +24,7 @@
         </div>
     {% endif %}
 </form>
+{% endblock %}
+{% block extra_scripts %}
+<script src="{{url_for('static', filename='js/index.js')}}"></script>
 {% endblock %}
