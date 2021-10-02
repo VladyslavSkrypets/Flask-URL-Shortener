@@ -52,7 +52,13 @@ pip install requirements.txt
 ```
 This command install all the required packages;
 
-4. Run in your terminal:
+4. Run next code in console for creating table in db
+```
+from app import db
+db.create_all()
+```
+
+5. Run in your terminal:
 ```python app.py```
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
