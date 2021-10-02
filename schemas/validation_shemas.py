@@ -10,7 +10,7 @@ add_link_schema = {
     'type': 'object',
     'properties': {
         'link': {'type': 'string'},
-        'expire_days': {'type': ['string', 'integer']}
+        'expire_days': {'type': 'integer'}
     },
     'required': ['link']
 }
