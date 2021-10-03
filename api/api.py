@@ -43,7 +43,7 @@ def add_link():
     host_url = request.host_url
 
     # validate input fields
-    if not validators.url(long_link) or days_left not in range(1, 365):
+    if not validators.url(long_link) or days_left not in range(1, 365 + 1):
         return make_response(jsonify({"error": "you must provide a valid fields format!"}), 400)
 
     url_exist = Urls.query.filter_by(url=long_link).first()
